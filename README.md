@@ -36,5 +36,4 @@ It includes a secure user login/registration system and provides health predicti
 
 ---
 
-## 📁 Project Structure
 
