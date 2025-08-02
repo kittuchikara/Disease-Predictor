@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #9face6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: black;
+}
+
+.dashboard-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+.dashboard-container h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: black;
+}
+
+.dashboard-container p {
+    margin-top: 0;
+    font-size: 18px;
+    color: black;
+}
+
+.card-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card.heart {
+    background-color: #f75c5c;
+}
+
+.card.heart:hover {
+    background-color: #e04b4b;
+}
+
+.card.diabetes {
+    background-color: #2dbb9b;
+}
+
+.card.diabetes:hover {
+    background-color: #22a388;
+}
+
+/* New logout button */
+.logout-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.card.logout {
+    background-color: #4a5568;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 250px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.card.logout:hover {
+    background-color: #2d3748;
+}  
+
+.card.info {
+    background-color: #6c5ce7;
+}
+
+.card.info:hover {
+    background-color: #5a4bd4;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Feature Guide</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='features.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="features-container">
+        <div class="card">
+            <h1>📘 Input Guide for Disease Prediction</h1>
+            <p>Understand what to enter on the Heart and Diabetes prediction pages.</p>
+
+            <section>
+                <h2>❤️ Heart Disease</h2>
+                <ul>
+                    <li><strong>Age:</strong> Your age (e.g., 45)</li>
+                    <li><strong>Sex:</strong> 1 = Male, 0 = Female</li>
+                    <li><strong>Chest Pain Type (cp):</strong><br>Indicates the nature of chest pain: 0 = Typical Angina, 1 = Atypical Angina, 2 = Non-anginal Pain, 3 = Asymptomatic</li>
+                    <li><strong>Resting Blood Pressure (trestbps):</strong>Resting Blood pressure in mm Hg measured when the patient is relaxed; values above 120 indicate elevated or high blood pressure.</li>
+                    <li><strong>Cholesterol (chol):</strong> Serum cholesterol in mg/dl</li>
+                    <li><strong>Fasting Blood Sugar (fbs):</strong> Fasting blood sugar (fbs) is the blood glucose level after fasting for 8+ hours; values >120 mg/dL may indicate diabetes or glucose intolerance. 1 = >120 mg/dl, 0 = ≤120 mg/dl</li>
+                    <li><strong>Rest ECG (restecg):</strong><br>0 = Normal, 1 = ST-T Abnormality, 2 = Left Ventricular Hypertrophy</li>
+                    <li><strong>Max Heart Rate (thalach):</strong> Maximum heart rate achieved during exercise</li>
+                    <li><strong>Exercise Induced Angina (exang):</strong> Exercise-induced angina.
+                    1 = Yes (chest pain during physical activity), 0 = No. Indicates coronary blockage.</li>
+                    <li><strong>Oldpeak:</strong> ST depression induced by exercise compared to rest. Measures heart stress during exercise; higher values may indicate ischemia (lack of oxygen to the heart).</li>
+                    <li><strong>Slope:</strong><br>Slope of the ST segment on ECG during exercise:
+                    • 0 = Upsloping (generally normal)
+                    • 1 = Flat (possible ischemia)
+                    • 2 = Downsloping (more likely ischemia)</li>
+                    <li><strong>Major Vessels Colored (ca):</strong> Number of major vessels (0-3) colored during fluoroscopy. Higher values suggest more heart blockage.</li>
+                    <li><strong>Thalassemia (thal):</strong><br>Thalassemia (a blood disorder):
+                    • 1 = Normal
+                    • 2 = Fixed defect (permanent heart damage)
+                    • 3 = Reversible defect (blood flow is temporarily restricted)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🩸 Diabetes</h2>
+                <ul>
+                    <li><strong>Pregnancies:</strong> To express the Number of pregnancies</li>
+                    <li><strong>Glucose:</strong>  To express the Glucose level in blood</li>
+                    <li><strong>Blood Pressure:</strong> To express the Blood pressure measurement</li>
+                    <li><strong>Skin Thickness:</strong> To express the thickness of the skin</li>
+                    <li><strong>Insulin:</strong> To express the Insulin level in blood</li>
+                    <li><strong>BMI:</strong> To express the Body mass index</li>
+                    <li><strong>Diabetes Pedigree Function:</strong> To express the Diabetes percentage</li>
+                    <li><strong>Age:</strong> Your age in years</li>
+                </ul>
+            </section>
+
+            <div class="btn-group">
+                <a href="/dashboard" class="btn">🏠 Back to Dashboard</a>
+                <a href="/predict_heart" class="btn">❤️ Heart Predictor</a>
+                <a href="/predict_diabetes" class="btn">🩸 Diabetes Predictor</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

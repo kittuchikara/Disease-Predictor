@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Hello, {{ session['user'] }} 👋</h1>
+        <p>Select a disease to predict:</p>
+        <div class="card-container">
+            <a href="/predict_heart" class="card heart">Heart Disease Predictor</a>
+            <a href="/predict_diabetes" class="card diabetes">Diabetes Predictor</a>
+            <a href="{{ url_for('features') }}" class="card info">📘 Feature Info</a>
+        </div>
+        <div class="logout-container">
+            <a href="/logout" class="card logout">Logout</a>
+        </div>
+    </div>
+</body>
+</html>  

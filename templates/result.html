@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ disease }} Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="result-container">
+        <div class="card {{ 'positive' if prediction == 0 else 'negative' }}">
+            <h1>
+                {% if prediction == 0 %}
+                    ✅ You are Healthy from {{ disease }}!
+                {% else %}
+                    ⚠️ Risk of {{ disease }} Detected!
+                {% endif %}
+            </h1>
+
+            <p class="description">
+                {% if prediction == 0 %}
+                    Based on the analysis, you show no signs of {{ disease }}. Keep living a healthy lifestyle!
+                {% else %}
+                    Our model indicates a higher probability of {{ disease }}. Please consult a healthcare professional.
+                {% endif %}
+            </p>
+
+            <p class="probability">📊 Model Confidence: {{ '%.2f' % (probability * 100) }}%</p>
+
+            <a href="{{ url_for('dashboard') }}" class="btn secondary">🏠 Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>  

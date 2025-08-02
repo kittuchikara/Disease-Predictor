@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='heart.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>❤️ Heart Disease Predictor</h1>
+            <p class="subtitle">Enter patient details to assess heart disease risk</p>
+
+            <form method="POST" action="/predict_heart" class="prediction-form">
+                <div class="input-grid">
+                    <div class="form-group">
+                        <label>👤 Age</label>
+                        <input type="number" name="age" required>
+                    </div>
+                    <div class="form-group">
+                        <label>⚥ Sex (1 = Male, 0 = Female)</label>
+                        <input type="number" name="sex" min="0" max="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>🔥 Chest Pain Type (0–3)</label>
+                        <input type="number" name="cp" min="0" max="3" required>
+                    </div>
+                    <div class="form-group">
+                        <label>💓 Resting BP</label>
+                        <input type="number" name="trestbps" required>
+                    </div>
+                    <div class="form-group">
+                        <label>🍬 Cholesterol</label>
+                        <input type="number" name="chol" required>
+                    </div>
+                    <div class="form-group">
+                        <label>🍃 Fasting Blood Sugar (>120 mg/dl, 1=True)</label>
+                        <input type="number" name="fbs" min="0" max="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>🩺 Rest ECG (0–2)</label>
+                        <input type="number" name="restecg" min="0" max="2" required>
+                    </div>
+                    <div class="form-group">
+                        <label>🏃 Max Heart Rate</label>
+                        <input type="number" name="thalach" required>
+                    </div>
+                    <div class="form-group">
+                        <label>😰 Exercise-Induced Angina (1=True)</label>
+                        <input type="number" name="exang" min="0" max="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>📉 ST Depression (Oldpeak)</label>
+                        <input type="number" name="oldpeak" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>📈 Slope of ST Segment (0–2)</label>
+                        <input type="number" name="slope" min="0" max="2" required>
+                    </div>
+                    <div class="form-group">
+                        <label>🫀 Major Vessels Colored (0–3)</label>
+                        <input type="number" name="ca" min="0" max="3" required>
+                    </div>
+                    <div class="form-group">
+                        <label>🧬 Thalassemia (1=Normal, 2=Fixed, 3=Reversible)</label>
+                        <input type="number" name="thal" min="1" max="3" required>
+                    </div>
+                </div>
+                <button type="submit" class="predict-btn">🔍 Predict Now</button>
+            </form>
+
+            <a href="/dashboard" class="back-btn">← Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='diabetes.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <h1>🔍 Diabetes Risk Estimator</h1>
+        <p class="subtitle">Enter patient information to predict diabetes risk</p>
+
+        <form method="POST" action="/predict_diabetes" class="prediction-form">
+            <div class="input-grid">
+                <div class="form-group">
+                    <label>🤰 Pregnancies</label>
+                    <input type="number" name="Pregnancies" required>
+                </div>
+                <div class="form-group">
+                    <label>🍬 Glucose Level</label>
+                    <input type="number" name="Glucose" required>
+                </div>
+                <div class="form-group">
+                    <label>💓 Blood Pressure</label>
+                    <input type="number" name="BloodPressure" required>
+                </div>
+                <div class="form-group">
+                    <label>🧪 Skin Thickness</label>
+                    <input type="number" name="SkinThickness" required>
+                </div>
+                <div class="form-group">
+                    <label>💉 Insulin Level</label>
+                    <input type="number" name="Insulin" required>
+                </div>
+                <div class="form-group">
+                    <label>📏 BMI</label>
+                    <input type="number" name="BMI" step="0.1" required>
+                </div>
+                <div class="form-group">
+                    <label>🧬 Pedigree Function</label>
+                    <input type="number" name="DiabetesPedigreeFunction" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label>🎂 Age</label>
+                    <input type="number" name="Age" required>
+                </div>
+            </div>
+            <button type="submit" class="predict-btn">⚡ Predict Now</button>
+        </form>
+
+        <a href="/dashboard" class="back-btn">← Back to Dashboard</a>
+    </div>
+</body>
+</html>
